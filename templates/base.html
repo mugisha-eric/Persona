@@ -1,0 +1,183 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <title>ExpenseWise | {% block title %} {% endblock %}</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
+    {% block link %}
+
+    {% endblock link %}
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet" />
+    <link href="{% static 'css/main.css'%}" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/dashboard.css' %}" rel="stylesheet" />
+    {% block css %}
+
+    {% endblock css %}
+
+    <style>
+        .content {
+            width: 100%;
+            overflow-y: scroll;
+            /* Enable vertical scrolling for content */
+            height: 100vh;
+            /* Set the content height to 100% of the viewport height */
+        }
+
+        #sidebar {
+            position: sticky;
+            top: 0;
+            height: 100%;
+            z-index: 2;
+            /* Set the sidebar height to 100% of the viewport height */
+
+            /* Enable vertical scrolling for the sidebar */
+        }
+
+        .black-text {
+            color: black;
+            font-weight: bold;
+
+        }
+
+        #sidebar .custom-menu {
+            position: absolute;
+        }
+
+        .logo {
+            font-size: 25px;
+        }
+
+        .sidebar-collapsed .content {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+            </div>
+            <div class="p-4 pt-5">
+                <h1><a href="/" class="logo">ExpenseWise</a></h1>
+                <ul class="list-unstyled components mb-5">
+                    <h6 class="sidebar-heading mt-4 mb-1 black-text ">
+                        Dashboard
+                    </h6>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="{%url 'expenses'%}">
+                            Expenses
+                        </a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link" href="{%url 'income'%}">
+                            Income
+                        </a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link" href="{%url 'forecast'%}">
+                            Forecast Expenses
+                        </a>
+                    </li>
+
+                    <h6 class="sidebar-heading mt-4 mb-1 black-text ">
+                        SUMMARY
+                    </h6>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="{%url 'stats'%}">
+                            Expense Summary
+                        </a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link" href="{%url 'income-summary'%}">
+                            Income summary
+                        </a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link" href="{%url 'report'%}">
+                            Reports
+                        </a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link" href="{%url 'list_goals'%}">
+                            Goals
+                        </a>
+                    </li>
+
+
+                    <h6 class="sidebar-heading mt-4 mb-1 black-text ">
+                        Settings
+                    </h6>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="{%url 'preferences'%}">
+                            General
+                        </a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link" href="{%url 'account' %}">
+                            Account
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div class="content">
+            {% include "navbar.html" %}
+            <div class="container-fluid  ">
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+
+        <!-- Page Content  -->
+    </div>
+
+    <script src="{%static 'js/jquery.min.js' %}"></script>
+    <script src="{%static 'js/popper.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="{%static 'js/main2.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script>
+        window.jQuery ||
+            document.write(
+                '<script src="/docs/4.4/static/js/vendor/jquery.slim.min.js"><\/script>'
+            );
+    </script>
+    <script>
+        {% block js %}
+
+        {% endblock js %}
+    </script>
+    <!-- <script src="/docs/4.4/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
+        crossorigin="anonymous"></script> -->
+
+    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
