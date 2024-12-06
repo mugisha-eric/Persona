@@ -1,10 +1,10 @@
 
 # Persona
-
+<p><img src="https://img.shields.io/badge/Persona-byMugisha-Eric?style=plastic" alt="shields"></p>
 Django Project for managing personal finance and tracker expenses with reports and budgetting capability.
 
 
-## Features
+## 🧐 Features
 
 - Bootstrap styles
 - Report Generation
@@ -15,14 +15,14 @@ Django Project for managing personal finance and tracker expenses with reports a
 - Income, expenses recording
 
 
-## Tech Stack
+## 💻 Tech Stack
 
 **Client:** HTML, CSS, Bootstrap
 
 **Server:** Django, SQLite
 
 
-## Deployment
+## 🛠️ Deployment
 
 To deploy this project run
 
@@ -50,17 +50,20 @@ Start using the project using:
   python manage.py runserver
 ```
 
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
 
 ## Screenshots
 
 ![App Screenshot](https://github.com/mugisha-eric/Persona/blob/main/Screenshot%202024-12-06%209.19.49%20AM.png?raw=true)
 
+## 🚀 Demo
+[View Demo  Here](https://example.com)
 
-## Support
+## 💖 Support
 
 For support, email mugisha@tuta.io or join our Slack channel.
+
+## 🛡️ License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
 
