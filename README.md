@@ -62,6 +62,8 @@ Start using the project using:
 
 For support, email mugisha@tuta.io or join our Slack channel.
 
+<p><a href="https://www.buymeacoffee.com/funderic"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="funderic" /></a></p><br><br>
+
 ## 🛡️ License
 
 [MIT](https://choosealicense.com/licenses/mit/)
