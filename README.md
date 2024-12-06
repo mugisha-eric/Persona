@@ -57,7 +57,7 @@ Start using the project using:
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/mugisha-eric/Persona/blob/main/Screenshot%202024-12-06%209.19.49%20AM.png?raw=true)
 
 
 ## Support
